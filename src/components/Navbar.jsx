@@ -25,7 +25,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex">
             <button
-              className="bg-gradient-to-r from-purple-500 to-purple-700 text-white px-6 py-2 rounded-tl-2xl rounded-br-2xl font-medium hover:opacity-80"
+              className="bg-gradient-to-r from-[#EB40DA] to-[#4D1AB1] text-white px-6 py-2 rounded-tl-2xl rounded-br-2xl font-medium hover:opacity-80"
               onClick={() => setShowForm(true)} 
             >
               Contact Us

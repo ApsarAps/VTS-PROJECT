@@ -5,7 +5,7 @@ const ContactForm = ({ onClose }) => {
     <div className="fixed inset-0  bg-opacity-100 flex justify-center items-center z-50 min-h-screen">
       <div className="bg-white text-center  p-6 rounded-lg shadow-2xl w-full max-w-md">
         <h2 className="text-center text-3xl font-bold mb-4">
-          Quick <span className="text-purple-500">Enquiry</span>
+          Quick <span className="text-[#4D1AB1]">Enquiry</span>
         </h2>
 
         <input type="text" placeholder="Enter Name" className="w-full border text-lg font-semi-bold border-purple-300 rounded-md px-4 py-2 mb-3" />
@@ -26,7 +26,7 @@ const ContactForm = ({ onClose }) => {
           <option>Digital Marketing</option>
         </select>
 
-        <button className=" bg-purple-500 text-xl font-semi-bold text-white px-8 py-2 rounded-md hover:bg-purple-700">
+        <button className=" bg-[#EB40DA] text-xl font-semi-bold text-white px-8 py-2 rounded-md hover:bg-[#4D1AB1]">
           Submit
         </button>
 
