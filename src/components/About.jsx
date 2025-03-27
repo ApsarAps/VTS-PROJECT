@@ -3,7 +3,7 @@ import aboutImage from "../assets//Images/VTS About us image.png";
 
 const About = () => {
   return (
-    <section className="pt-32 px-6 lg:px-20  text-center">
+    <section className="pt-45  lg:pt-18 px-6 lg:px-20  text-center">
       <h2 className="text-3xl lg:text-5xl font-bold text-[#EB40DA] mb-4">About Us</h2>
       <h3 className="text-xl lg:text-2xl font-bold text-black mb-2">
         VTS BUILD THE SKILLS TO DRIVE YOUR
