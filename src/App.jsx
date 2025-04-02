@@ -5,6 +5,8 @@ import HomePage from './components/HomePage'
 import Footer from './components/Footer'
 import About from './components/About'
 import CourseDetails from './components/CourseDetails'
+import ContactForm from './components/ContactForm'
+import EnrollPage from './components/EnrollPage'
 
 export const App = () => {
   return (
@@ -13,9 +15,11 @@ export const App = () => {
     <Navbar />
     <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactForm />} />
         <Route path="/trainings" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/course/:courseName" element={<CourseDetails />} />
+        <Route path="/enroll/:courseName" element={<EnrollPage />} />
     </Routes>
     <Footer />
     </>

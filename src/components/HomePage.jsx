@@ -6,7 +6,7 @@ import image2 from  "../assets/Images/VTS home page img.png";
 
 const HomePage = () => {
   return (
-    <div className="w-full pt-40  lg:pt-15">
+    <div className="w-full pt-[6rem] md:pt-[7rem] lg:pt-15">
      <section className="bg-white py-12 px-4 flex flex-col-reverse lg:flex-row items-center justify-between max-w-6xl mx-auto">
   <div className="lg:w-1/2 text-center lg:text-left">
     <h1 className="text-4xl md:text-4xl font-bold text-gray-900">
