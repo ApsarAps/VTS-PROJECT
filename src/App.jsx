@@ -7,6 +7,7 @@ import About from './components/About'
 import CourseDetails from './components/CourseDetails'
 import ContactForm from './components/ContactForm'
 import EnrollPage from './components/EnrollPage'
+import PaymentSuccessPage from './components/PaymentSuccessPage'
 
 export const App = () => {
   return (
@@ -20,6 +21,7 @@ export const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/course/:courseName" element={<CourseDetails />} />
         <Route path="/enroll/:courseName" element={<EnrollPage />} />
+        <Route path="/payment-success" element={<PaymentSuccessPage />} />
     </Routes>
     <Footer />
     </>
