@@ -1,17 +1,17 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import CommonCard from "./CommonCard";
+import { motion } from "framer-motion";
 import image1 from "../assets/Images/VTS Python fullstack img.png";
-import image3 from "../assets/Images/VTS Java Fullstack Img.png";
-import image4 from "../assets/Images/VTS UI UX Image.png";    
-import image5 from "../assets/Images/Mernstack Img.png";    
-import image6 from "../assets/Images/Data Analytics image.png";    
-import image7 from "../assets/Images/Data Science Image.png";    
-import image8 from "../assets/Images/Business Analytics image.png";    
-import image9 from "../assets/Images/Mobile App development image.png";    
-import image10 from "../assets/Images/Software testing image.png";    
-import image11 from "../assets/Images/AWS images.png";    
-import image12 from "../assets/Images/Digital Marketing image.png";   
+import image3 from  "../assets/Images/VTS Java Fullstack Img.png";
+import image4 from  "../assets/Images/VTS UI UX Image.png";    
+import image5 from  "../assets/Images/Mernstack Img.png";    
+import image6 from  "../assets/Images/Data Analytics image.png";    
+import image7 from  "../assets/Images/Data Science Image.png";    
+import image8 from  "../assets/Images/Business Analytics image.png";    
+import image9 from  "../assets/Images/Mobile App development image.png";    
+import image10 from  "../assets/Images/Software testing image.png";    
+import image11 from  "../assets/Images/AWS images.png";    
+import image12 from  "../assets/Images/Digital Marketing image.png";   
 
 const courses = [
   {
@@ -25,9 +25,9 @@ const courses = [
   {
     category: "Java Fullstack Development & Training",
     items: [
-      { title: "JAVA FULLSTACK DEVELOPMENT", duration: "45 Days", price: "3,000", image: image3, link: "/course/java-fullstack" },
-      { title: "JAVA FULLSTACK DEVELOPMENT & INTERNSHIP", duration: "60 Days", price: "15,000", image: image3, link: "/course/java-fullstack-intern" },
-      { title: "JAVA FULLSTACK DEVELOPMENT & WFH JOB OFFER", duration: "90 Days", price: "36,000", image: image3, link: "/course/java-fullstack-wfh" }
+      { title: "JAVA FULLSATACK DEVELOPMENT", duration: "45 Days", price: "3,000", image: image3, link: "/course/java-fullstack" },
+      { title: "JAVA FULLSATACK DEVELOPMENT & INTERNSHIP", duration: "60 Days", price: "15,000", image: image3, link: "/course/java-fullstack-intern" },
+      { title: "JAVA FULLSATACK DEVELOPMENT & WFH JOB OFFER ", duration: "90 Days", price: "36,000", image: image3, link: "/course/java-fullstack-wfh" }
     ]
   },
   {
@@ -39,12 +39,12 @@ const courses = [
     ]
   },
   {
-    category: "MERN Stack Development & Training",
+  category: "MERN Stack Development & Training",
     items: [
       { title: "MERN Stack Development", duration: "45 Days", price: "3,000", image: image5, link: "/course/mern-stack" },
       { title: "MERN Stack Development & Internship", duration: "60 Days", price: "15,000", image: image5, link: "/course/mern-stack-intern" },
     ]
-  },
+  },  
   {
     category: "Data Analytics & Training",
     items: [
@@ -67,12 +67,12 @@ const courses = [
     ]
   },
   {
-    category: "Software Testing & Training",
-    items: [
-      { title: "Software Testing & Internship", duration: "45 Days", price: "3,000", image: image10, link: "/course/software-testing" },
-      { title: "Software Testing & Work From Home Internship", duration: "90 Days", price: "15,000", image: image10, link: "/course/software-testing-job" }
-    ]
-  },
+  category: "Software Testing & Training",
+  items: [
+    { title: "Software Testing & Internship", duration: "45 Days", price: "3,000", image: image10, link: "/course/software-testing" },
+    { title: "Software Testing & Work From Home Internship", duration: "90 Days", price: "15,000", image: image10, link: "/course/software-testing-job" }
+  ]
+},
   {
     category: "Digital Marketing & Training",
     items: [
@@ -91,34 +91,38 @@ const courses = [
 
 const CourseList = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      {courses.map((course, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-12"
-        >
-          <h2 className="text-center text-3xl font-bold mb-6 text-gray-800">
-            {course.category}
-          </h2>
-          <div className="flex flex-row sm:flex-col  justify-center gap-2">
-            {course.items.map((item, idx) => (
-              <CommonCard
-                key={idx}
-                title={item.title}
-                duration={item.duration}
-                price={item.price}
-                image={item.image}
-                link={item.link}
-              />
-            ))}
-          </div>
-        </motion.div>
-      ))}
-    </div>
+    <motion.div
+    className="container mx-auto px-4"
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
+    {courses.map((course, index) => (
+      <div key={index}>
+        <motion.h2
+    className="text-center text-2xl font-bold mt-12 mb-8"
+    initial={{ opacity: 0, x: -50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    viewport={{ once: true }}
+  >
+    {course.category}
+  </motion.h2>
+        <div className="flex flex-wrap justify-center mb-6 gap-6">
+          {course.items.map((item, idx) => (
+            <CommonCard 
+              key={idx} 
+              title={item.title} 
+              duration={item.duration} 
+              price={item.price} 
+              image={item.image} 
+              link={item.link} 
+            />
+          ))}
+        </div>
+      </div>
+    ))}
+  </motion.div>
   );
 };
 
